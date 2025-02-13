@@ -1,5 +1,4 @@
 let isVisible = false;
-
 window.addEventListener('scroll', () => {
   const hiddenWord = document.querySelector('.hidden-word');
   const scrollPosition = window.scrollY;
