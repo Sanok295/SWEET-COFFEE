@@ -4,12 +4,32 @@
     --black-span: rgba(0,0,0,1);
     --hover: rgba(142, 156, 139, 1);
 }
-/* @font-face {
+/* ВЫПОЛЗАНИЕ COFFEE при прокрутке страницы (код к нему в main.js)  */
+/* .main-word {
+    position: relative;
+    padding-left: 10px;
+    position: absolute;
+    top: 0; 
+    left: 0;
+} */
+/* .hidden-word {
+    text-decoration: overline;
+    text-decoration-thickness: 1px;
+    position: absolute;
+    top: -2px; 
+    left: 0;
+    opacity: 0;
+    transform: translateY(20px); 
+    transition: opacity 1.2s ease, transform 1.2s ease;
+} */
+
+/* Шрифты по желанию Васи */
+@font-face {
     font-family: 'Forma DJR';
-    src: local('Forma DJR-Bold'),
-    url('../fonts/forma-djr-cyrillic-text-4.woff2') format('woff2'),
-    url('../fonts/forma-djr-cyrillic-text-4.woff') format('woff');
-    font-weight: 800;
+    src: local('Forma DJR-Normal'),
+    url('../fonts/forma-djr-cyrillic-text-3.woff2') format('woff2'),
+    url('../fonts/forma-djr-cyrillic-text-3.woff') format('woff');
+    font-weight: 500;
     font-style: normal;
     font-display: swap;
 }
@@ -21,7 +41,8 @@
     font-weight: 800;
     font-style: normal;
     font-display: swap;
-} */
+}
+
 @font-face {
     font-family: 'Novelist';
     src: local('Novelist'),
@@ -45,7 +66,7 @@ body{
     width: 100%;
     margin: 0 auto;
     background-color: var(--back);
-    font-family: 'Novelist';
+    font-family: 'Forma DJR';
     font-size: 24px;
     font-weight: 500;
     color: var(--black);
@@ -61,16 +82,7 @@ a{
     text-decoration: none;
     color: var(--black);
 }
-hr{
-    align-self: center;
-    min-width: 80px;
-    height: 1px;
-    margin: 0;
-    padding: 0;
-    background-color: var(--black); 
-    border-color: var(--black);
-    color: var(--black);
-}
+
 .container{
     width: 1150px;
     margin: 0 auto;
@@ -89,14 +101,14 @@ hr{
     font-size: 36px;    
 }
 .text-p, .text-span{
-    font-size: 24px;
+    font-size: 22px;
 }
 
 
 /* HEADER UP*/
 .header{
     position: relative;
-    margin-bottom: 50px;
+    margin-bottom: 65px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -109,66 +121,106 @@ hr{
     top: 0;
     display: flex;
     justify-content: space-between;
-    padding: 20px 20px 10px;
+    gap: 100px;
+    padding: 10px 40px 10px;
 }
-
-
-
-/* ВЫПОЛЗАНИЕ COFFEE */
-.text {
+.header__up-left{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 150px;
+}
+.header__up-left-logo{
+    font-family: 'Novelist';
     position: relative;
-}
-.main-word {
-    position: relative;
-    padding-left: 10px;
-    position: absolute;
-    top: 0; 
-    left: 0;
-}
-.hidden-word {
-    text-decoration: overline;
-    text-decoration-thickness: 1px;
-    position: absolute;
-    top: -2px; 
-    left: 0;
-    opacity: 0;
-    transform: translateY(20px); 
-    transition: opacity 1.2s ease, transform 1.2s ease;
-}
-
-
-
-.header__up_logo{
     top: -10px;
     font-size: 40px;
     color: var(--black);
 }
-.header__up_menu{
-    padding-left: 90px;
+
+/* ВЫПОЛЗАНИЕ COFFEE */
+.header__up-left-logo-hidden-word {
+    position: absolute;
+    left: -10px;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: slide-in 1.5s forwards;
+    animation-delay: 0.5s;
+    text-decoration: overline;
+    text-decoration-thickness: 1px;
+}
+@keyframes slide-in {
+    from {
+        opacity: 0;
+        transform: translateY(0);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(35px);
+    }
+}
+.header__up-left-menu{
     color: var(--black-span);
     display: flex;
-    gap: 20px;
+    gap: 40px;
     justify-content: center;
     align-items: center;
 }
-.header__up_menu-item{
-    padding: 10px 15px;
-    transition: 0.5s;
-    border-radius: 20px;
+.header__up-left-menu-item{
+    white-space: nowrap;
+    transition: 0.3s;
 }
-.header__up_menu-item:hover{
+.header__up-left-menu-item:hover{
     color: var(--hover);
 }
-.header__up_right-href{
-    font-size: 32px;
+.header__up-right{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+}
+.header__up-right-contacts {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.header__up-right-contacts-numbers {
+    
+}
+.header__up-right-contacts-numbers-up{
+    white-space: nowrap;
+    font-size: 12px;
+    display: flex;
+    flex-direction: column;
+}
+.header__up-right-contacts-numbers-up, .header__up-right-contacts-numbers-down > a{
+    transition: 0.3s;
+}
+.header__up-right-contacts-numbers-up:hover, .header__up-right-contacts-numbers-down > a:hover{
+    color: var(--hover);
+    fill: var(--hover);
+}
+.header__up-right-contacts-numbers-down{
+    text-align: center;
+}
+.header__up-right-contacts-time{
+    font-size: 18px;
+    width: 160px;
+    text-align: center;
+    align-items: center;
+}
+
+.header__up-right-href{
+    font-size: 30px;
     align-self: center;
     color: var(--black);
     padding: 10px 15px;
-    transition: 0.5s;
+    transition: 0.3s;
     border-radius: 20px;
     border: 2px solid var(--black);
 }
-.header__up_right-href:hover{
+.header__up-right-href:hover{
     transform: scale(1.02);
     color: var(--hover);
     border: 2px solid var(--hover);
@@ -207,7 +259,7 @@ hr{
 .header__down_text-span.text-span {
     max-width: 250px;
     width: 100%;
-    margin-bottom: 20px;
+    margin-bottom: 5px;
 }
 .header__down_text-h1 {
     margin-bottom: 20px;
@@ -227,76 +279,60 @@ hr{
     display: flex;
     flex-direction: column;
     align-items: end;
-}
-.about__row {
-    max-width: 500px;
-    width: 100%;
-    display: flex;
-    justify-content: end;
-    flex-direction: column;
-    gap: 1px;
     margin-bottom: 50px;
 }
-.about__row:first-child{
+.about__text{
+    width: 500px;
+}
+.about__text:first-child{
     margin-bottom: 20px;
 }
-.about__row_left-h2 {
-    padding-right: 160px;
+.about__h2 {
+    position: relative;
+    right: 150px;
+    text-transform: uppercase;
+    white-space: nowrap;
 }
 
-.about__row_left-p {
-    color: var(--red-gray);
-}
-
-.about__row_right {
-    text-align: center;
-}
-.about__row_right-cup {
+/* .about__row_right-cup {
     background-image: url(../img/background-2.png);
     border: 1px groove var(--red-gray);
     border-radius: 500px;   
-}
-/* ABOUT-DOWN */
-.about__row_down-flex {
-    padding: 30px 0;
-    background-image: url(../img/background-2.png);
-    border: 1px solid var(--red-gray);
-    border-radius: 20px;
-}
-.about__row_down-flex-item {
-    padding-top: 150px;
+} */
+
+/* ABOUT-FLEX */
+.about__flex {
+    padding-top: 70px;
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    background-image: url(../img/icons/coffee-beans-roast-brew-svgrepo-com.png);
-    background-size: 90px;
+    justify-content: space-around;
+    text-align: center;
+
+}
+.about__flex-item {
+    position: relative;
+}
+.about__flex-item-bg{
+    width: 90px;
+    height: 100px;
+    background-image: url(/img/icons__about/Ellipse\ 5.png);
     background-repeat: no-repeat;
-    background-position: top;   
+    background-size: cover;
+    position: absolute;
+    top: 0;
+    left: 80px;
+    z-index: 1;
 }
-.icon-2 {
-    background-image: url(../img/icons/power-bank.png);
+.about__flex-item-h3 {
+    padding-top: 100px;
+    position: relative;
+    z-index: 2;
 }
-.icon-3 {
-    background-image: url(../img/icons/syrup.png);
-}
-.icon-4 {
-    background-image: url(../img/icons/coffee.png);
+.about__flex-item-span {
+    position: relative;
+    z-index: 2;
 }
 
-.about__row_down-flex-item-h2 {
-    text-align: center;
-    padding: 100px 0 10px;
-}
-.h2_on-1380px {
-    display: none;
-}
-.about__row_down-flex-item-span {
-    text-align: center;
-    color: var(--red-gray);
-}
-.br__on-860{
-    display: none;
-}
+
 
 
 /* MENU */
