@@ -98,7 +98,8 @@ a{
     font-weight: 400;
 }
 .text-h3{
-    font-size: 36px;    
+    font-size: 36px; 
+    font-weight: 500;   
 }
 .text-p, .text-span{
     font-size: 22px;
@@ -114,9 +115,11 @@ a{
     align-items: center;
 } 
 .header__up{  
+    z-index: 20;
     background-color: rgba(226, 219, 213, 0.9);
     border-radius: 10px;
-    width: 1280px;
+    max-width: 1280px;
+    width: 100%;
     position: fixed;
     top: 0;
     display: flex;
@@ -128,7 +131,7 @@ a{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    gap: 150px;
+    gap: 2em;
 }
 .header__up-left-logo{
     font-family: 'Novelist';
@@ -219,6 +222,7 @@ a{
     transition: 0.3s;
     border-radius: 20px;
     border: 2px solid var(--black);
+    text-align: center;
 }
 .header__up-right-href:hover{
     transform: scale(1.02);
@@ -303,11 +307,11 @@ a{
 /* ABOUT-FLEX */
 .about__flex {
     margin: 0 auto;
-    margin-top: 60px;
+    margin-top: 40px;
     display: flex;
     justify-content: center;
     text-align: center;
-    padding:  0 40px;
+    padding:  20px 40px;
     border: 2px solid var(--black);
     border-radius: 30px;
 }
@@ -315,8 +319,8 @@ a{
     position: relative;
     width: 250px;
 }
-.about__flex-item-bg, .about__flex-item-vector, .about__flex-item-circle{
-    width: 70px;
+.about__flex-item-bg, .about__flex-item-vector, .about__flex-item-circle, .about__flex-item-bg-2, .about__flex-item-circle-2, .about__flex-item-bg-3, .about__flex-item-bg-4{
+    width: 72px;
     height: 78px;
     background-image: url(/img/icons__about/bean-icon.png);
     background-repeat: no-repeat;
@@ -339,6 +343,26 @@ a{
 .about__flex-item-vector{
     background-image: url(/img/icons__about/vector-bean.png);
     z-index: 2;
+    width: 50px;
+}
+.about__flex-item-bg-2{
+    background-image: url(../img/icons__about/battery-icon.png);
+    width: 74px;
+}
+.about__flex-item-circle-2{
+    width: 25px;
+    height: 38px;
+    background-image: url(../img/icons__about/vector-battery.png);
+}
+.about__flex-item-bg-3{
+    background-image: url(../img/icons__about/Syrop-icon.png);
+    width: 40px;
+    height: 100px;
+}
+.about__flex-item-bg-4{
+    background-image: url(../img/icons__about/Coffee-icon.png);
+    width: 70px;
+    height: 90px;
 }
 .about__flex-item-h3 {
     padding-top: 200px;
