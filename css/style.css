@@ -302,34 +302,52 @@ a{
 
 /* ABOUT-FLEX */
 .about__flex {
-    padding-top: 70px;
+    margin: 0 auto;
+    margin-top: 60px;
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
     text-align: center;
-
+    padding:  0 40px;
+    border: 2px solid var(--black);
+    border-radius: 30px;
 }
 .about__flex-item {
     position: relative;
+    width: 250px;
 }
-.about__flex-item-bg{
-    width: 90px;
-    height: 100px;
-    background-image: url(/img/icons__about/Ellipse\ 5.png);
+.about__flex-item-bg, .about__flex-item-vector, .about__flex-item-circle{
+    width: 70px;
+    height: 78px;
+    background-image: url(/img/icons__about/bean-icon.png);
     background-repeat: no-repeat;
     background-size: cover;
     position: absolute;
     top: 0;
-    left: 80px;
+    left: 0;
+    bottom: 100px;
+    right: 0;
+    margin: auto;
     z-index: 1;
 }
-.about__flex-item-h3 {
-    padding-top: 100px;
-    position: relative;
+.about__flex-item-circle{
+    background-image: url(/img/icons__about/Circle-icon.png);
+    width: 170px;
+    height: 170px;
+    bottom: 100px;
+    z-index: 5;
+}
+.about__flex-item-vector{
+    background-image: url(/img/icons__about/vector-bean.png);
     z-index: 2;
+}
+.about__flex-item-h3 {
+    padding-top: 200px;
+    position: relative;
+    z-index: 3;
 }
 .about__flex-item-span {
     position: relative;
-    z-index: 2;
+    z-index: 3;
 }
 
 
