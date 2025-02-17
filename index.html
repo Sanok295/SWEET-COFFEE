@@ -12,6 +12,10 @@
 </head> 
 <body>
     <header class="header">
+        
+
+
+
         <!-- <video id="background-video" autoplay muted loop>                              ВСТУПИТЕЛЬНОЕ ВИДЕО
             <source src="video/IMG_6390.mp4" type="video/mp4">
         </video> -->
@@ -21,11 +25,11 @@
                     <span class="header__up-left-logo-main-word">Sweet</span>
                     <span class="header__up-left-logo-hidden-word">Coffee</span>
                 </div>
-                <nav>
-                    <ul class="header__up-left-menu on">
+                <nav class="hulm__off-720px">
+                    <ul class="header__up-left-menu">
                         <li><a class="header__up-left-menu-item text-span" href="#about">О нас</a></li>
                         <li><a class="header__up-left-menu-item text-span" href="#menu">Меню</a></li>
-                        <li><a class="header__up-left-menu-item text-span off" href="#bonus">Акции</a></li>
+                        <li><a class="header__up-left-menu-item text-span" href="#bonus">Акции</a></li>
                         <!-- <li><a class="header__up-left_menu-item text-span off" href="#">Галерея</a></li> -->
                         <li><a class="header__up-left-menu-item text-span" href="#contacts">Контакты</a></li>
                     </ul>
@@ -40,6 +44,26 @@
                     </div>
                 </div>
                 <span class="header__up-right-contacts-time text-span">Каждый день <br> 8:00 - 22:00</span>
+                
+                                 <!-- БУРГЕР-МЕНЮ -->
+                                 <div class="header__up-burger-menu hubm__on_720px ">
+                                    <input type="checkbox" id="burger-toggle" hidden>
+                                    <label class="burger-label" for="burger-toggle">
+                                        <span class="line"></span>
+                                        <span class="line"></span>
+                                        <span class="line"></span>
+                                    </label>
+                                    <nav class="menu">
+                                        <ul class="header__up-left-menu on">
+                                            <li><a class="header__up-left-menu-item text-span hulmi__off-720px" href="#about">О нас</a></li>
+                                            <li><a class="header__up-left-menu-item text-span" href="#menu">Меню</a></li>
+                                            <li><a class="header__up-left-menu-item text-span hulmi__off-680px" href="#bonus">Акции</a></li>
+                                            <!-- <li><a class="header__up-left_menu-item text-span off" href="#">Галерея</a></li> -->
+                                            <li><a class="header__up-left-menu-item text-span" href="#contacts">Контакты</a></li>
+                                        </ul>
+                                    </nav>
+                                </div>
+                                
                 <a href="#order" class="header__up-right-href">Заказать кофе</a>
             </div>
         </div>
@@ -54,6 +78,25 @@
         </div>
     </header>
     <main>
+        
+        <!-- <div class="card">Карточка 1</div>
+        <div class="card">Карточка 2</div>
+        <div class="card">Карточка 3</div>
+        <label class="btn" for="toggle">Полное меню</label>
+        <input type="checkbox" id="toggle" hidden>
+        <div class="hidden-block">
+            <div class="hidden-menu" id="fullMenu">
+                <div class="card">Карточка 1</div>
+                <div class="card">Карточка 2</div>
+                <div class="card">Карточка 3</div>
+                <div class="card">Добавочная карточка 4</div>
+                <div class="card">Добавочная карточка 5</div>
+                <div class="card">Добавочная карточка 6</div>
+                <div class="card">Добавочная карточка 7</div>
+                <div class="card">Добавочная карточка 8</div>
+                <div class="card">Добавочная карточка 9</div>
+            </div>
+        </div> -->
         <section class="about" id="about">
             <div class="container">
                 <h2 class="about__h2 text-h2">О нас</h2>
@@ -256,6 +299,6 @@
 
 
 
-
+    
 </body>
 </html>

@@ -4,6 +4,18 @@
     --black-span: rgba(0,0,0,1);
     --hover: rgba(142, 156, 139, 1);
 }
+
+
+
+main, footer{
+    display: none;
+}
+
+
+
+
+
+
 /* ВЫПОЛЗАНИЕ COFFEE при прокрутке страницы (код к нему в main.js)  */
 /* .main-word {
     position: relative;
@@ -84,7 +96,8 @@ a{
 }
 
 .container{
-    width: 1150px;
+    max-width: 1150px;
+    width: 100%;
     margin: 0 auto;
     padding: 0 10px;
 }
@@ -119,19 +132,18 @@ a{
     background-color: rgba(226, 219, 213, 0.9);
     border-radius: 10px;
     max-width: 1280px;
-    width: 100%;
     position: fixed;
     top: 0;
     display: flex;
     justify-content: space-between;
-    gap: 100px;
+    gap: 3vw;
     padding: 10px 40px 10px;
 }
 .header__up-left{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    gap: 2em;
+    gap: 3vw;
 }
 .header__up-left-logo{
     font-family: 'Novelist';
@@ -159,13 +171,13 @@ a{
     }
     to {
         opacity: 1;
-        transform: translateY(35px);
+        transform: translateY(32px);
     }
 }
 .header__up-left-menu{
     color: var(--black-span);
     display: flex;
-    gap: 40px;
+    gap: 2vw;
     justify-content: center;
     align-items: center;
 }
@@ -180,7 +192,7 @@ a{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    gap: 15px;
+    gap: 1vw;
 }
 .header__up-right-contacts {
     display: flex;
@@ -209,7 +221,8 @@ a{
 }
 .header__up-right-contacts-time{
     font-size: 18px;
-    width: 160px;
+    max-width: 160px;
+    width: 100%;
     text-align: center;
     align-items: center;
 }
@@ -269,7 +282,8 @@ a{
     margin-bottom: 20px;
 }
 .header__down_text-p {
-    width: 650px;
+    max-width: 650px;
+    width: 100%;
     color: var(--red-gray);
 }
 
@@ -624,4 +638,106 @@ strong{
 
 .footer__text-span, .footer__text-span>a{
     color: var(--red-gray);
+}
+
+
+/* .btn {
+    display: inline-block;
+    margin: 20px;
+    padding: 10px 20px;
+    background-color: transparent;
+    color: var(--hover);
+    cursor: pointer;
+    border: 2px solid var(--black);
+    border-radius: 5px;
+}
+
+.hidden-block {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s ease, padding 0.5s ease;
+    padding: 0 20px;
+    border: 1px solid #ccc;
+}
+
+input#toggle:checked + .hidden-block {
+    overflow:auto;  Полоса прокрутки
+    max-height: 100px; Увеличьте или уменьшите под свои нужды
+    padding: 20px;
+}
+
+.card {
+    border: 1px solid #ccc;
+    padding: 20px;
+    width: 200px;
+    text-align: center;
+}
+.hidden-menu {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 20px;
+} */
+
+
+
+.header__up-burger-menu {
+    display: none;
+    position: relative;
+}
+
+.burger-label {
+    cursor: pointer;
+    display: inline-block;
+    padding: 10px;
+}
+
+.line {
+    display: block;
+    width: 25px;
+    height: 3px;
+    background-color: #333;
+    margin: 4px 0;
+    transition: 0.3s;
+}
+
+.menu {
+    display: none;
+    background-color: #fff;
+    position: absolute;
+    top: 50px;
+    right: 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.menu li {
+    padding: 10px 20px;
+}
+
+.menu li a {
+    text-decoration: none;
+    color: #333;
+}
+
+#burger-toggle:checked + .burger-label .line:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+}
+
+#burger-toggle:checked + .burger-label .line:nth-child(2) {
+    opacity: 0;
+}
+
+#burger-toggle:checked + .burger-label .line:nth-child(3) {
+    transform: rotate(-45deg) translate(5px, -5px);
+}
+
+#burger-toggle:checked ~ .menu {
+    display: block;
 }
