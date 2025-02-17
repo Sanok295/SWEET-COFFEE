@@ -1,3 +1,8 @@
+@media screen and (max-width:1920px){
+    .header__up-left{
+        gap: 8vw;
+    }
+}
 @media screen and (max-width:1280px){
     /* TEXT STYLE */
 .text-h1{
@@ -17,7 +22,8 @@
 
 /* HEADER */
 .header__up-left-logo{
-    font-size: 30px;
+    height: 60px;
+    width: 90px;
 }
 .header__up-left-logo-hidden-word { /* ВЫПОЛЗАНИЕ COFFEE */
     left: -6px;
@@ -41,6 +47,10 @@
     .header__up-right-href{
         max-width: 160px;
         padding: 5px 10px;
+        white-space: wrap;
+    }
+    .header__up-right{
+        gap: 2vw;
     }
 }
 
@@ -60,18 +70,29 @@
     .text-p, .text-span{
         font-size: 16px;
     }
-    .header__up-left-logo{
-        font-size: 24px;
+    .header__up-left{
+        gap: 2vw;
     }
-
+    .header__up-right{
+        gap: 0;
+    }
 }
 
 @media screen and (max-width:720px){
     .hubm__on_720px{
         display: block;
+        padding-left: 5vw;
+        padding-right: 3vw;
     }
     .hulm__off-720px{
         display: none;
+    }
+    .header__up-left-logo{
+        height: 50px;
+        width: 75px;
+    }
+    .header__up-right{
+        gap: 3vw;
     }
 }
 
@@ -91,9 +112,6 @@
     .text-p, .text-span{
         font-size: 14px;
     }
-    .header__up-left-logo{
-        font-size: 20px;
-    } 
     .header__up-right-href{
         font-size: 20px;
         padding: 3px 5px;
@@ -102,6 +120,26 @@
     .header__up-right-contacts-numbers-up{
         font-size: 10px;
     }
+}
+
+@media screen and (max-width:520px){
+    label.burger-label{
+        padding: 0;
+    }
+    .header__up-burger-menu {
+        padding: 0;
+    }
+    .header__up-right{
+        gap: 1vw;
+    }
+    /* .header__up-right{
+        flex-wrap: wrap;
+        min-width: 345px;
+        gap: 1%;
+    }
+    .header__up-right-href{
+        margin-left: 200px;
+    } */
 }
 
 
