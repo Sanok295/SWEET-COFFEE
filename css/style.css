@@ -7,9 +7,9 @@
 
 
 
-main, footer{
+/* main, footer{
     display: none;
-}
+} */
 
 
 
@@ -365,13 +365,14 @@ a{
     width: 50px;
 }
 .about__flex-item-bg-2{
-    background-image: url(../img/icons__about/battery-icon.png);
-    width: 74px;
+    background-image: url(../img/icons__about/bonus-icon.png);
+    width: 78px;
 }
 .about__flex-item-circle-2{
     width: 25px;
     height: 38px;
-    background-image: url(../img/icons__about/vector-battery.png);
+    background-image: url(../img/icons__about/vector-bonus.png);
+    background-color: var(--back);
 }
 .about__flex-item-bg-3{
     background-image: url(../img/icons__about/Syrop-icon.png);
