@@ -370,9 +370,8 @@ a{
 }
 .about__flex-item-circle-2{
     width: 25px;
-    height: 38px;
+    height: 50px;
     background-image: url(../img/icons__about/vector-bonus.png);
-    background-color: var(--back);
 }
 .about__flex-item-bg-3{
     background-image: url(../img/icons__about/Syrop-icon.png);
