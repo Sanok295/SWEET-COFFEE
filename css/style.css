@@ -7,7 +7,7 @@
 
 
 
-main, footer{
+.menu, .bonus, .order, footer{
     display: none;
 }
 
@@ -206,7 +206,7 @@ a{
 }
 .header__up-right-contacts-numbers-up{
     white-space: nowrap;
-    font-size: 12px;
+    font-size: 14px;
     display: flex;
     flex-direction: column;
 }
@@ -327,13 +327,14 @@ a{
     display: flex;
     justify-content: center;
     text-align: center;
-    padding:  20px 40px;
+    padding: 10px 20px;
     border: 2px solid var(--black);
     border-radius: 30px;
+    gap: 3vw;
 }
 .about__flex-item {
     position: relative;
-    width: 250px;
+    width: 200px;
 }
 .about__flex-item-bg, .about__flex-item-vector, .about__flex-item-circle, .about__flex-item-bg-2, .about__flex-item-circle-2, .about__flex-item-bg-3, .about__flex-item-bg-4{
     width: 72px;
@@ -351,8 +352,8 @@ a{
 }
 .about__flex-item-circle{
     background-image: url(/img/icons__about/Circle-icon.png);
-    width: 170px;
-    height: 170px;
+    width: 150px;
+    height: 150px;
     bottom: 100px;
     z-index: 5;
 }
