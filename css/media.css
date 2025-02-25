@@ -230,7 +230,7 @@
 }
 .about__flex-item {
     position: relative;
-    width: 80px;
+    width: 70px;
 }
 .about__flex-item-bg, .about__flex-item-vector, .about__flex-item-circle, .about__flex-item-bg-2, .about__flex-item-circle-2, .about__flex-item-bg-3, .about__flex-item-bg-4{
     width: 20px;
