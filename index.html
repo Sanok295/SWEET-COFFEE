@@ -21,16 +21,30 @@
             <source src="video/IMG_6390.mp4" type="video/mp4">
         </video> -->
         <div class="header__up">
-            <div class="header__up-left">
-                <div class="header__up-left-logo text">
-
-
-                </div>
-                <nav class="hulm__off-720px">
-                    <ul class="header__up-left-menu">
-                        <li><a class="header__up-left-menu-item text-span" href="#about">О нас</a></li>
+            <div class="header__up-logo text">
+            </div>
+            <nav class="header__up-menu hulm__off-720px">
+                <ul class="header__up-menu-items">
+                    <li><a class="header__up-left-menu-item text-span" href="#about">О нас</a></li>
+                    <li><a class="header__up-left-menu-item text-span" href="#menu">Меню</a></li>
+                    <li><a class="header__up-left-menu-item text-span" href="#bonus">Акции</a></li>
+                    <!-- <li><a class="header__up-left_menu-item text-span off" href="#">Галерея</a></li> -->
+                    <li><a class="header__up-left-menu-item text-span" href="#contacts">Контакты</a></li>
+                </ul>
+            </nav>
+            <!-- БУРГЕР-МЕНЮ -->
+            <div class="header__up-burger-menu hubm__on_720px ">
+                <input type="checkbox" id="burger-toggle" hidden>
+                <label class="burger-label" for="burger-toggle">
+                    <span class="line"></span>
+                    <span class="line"></span>
+                    <span class="line"></span>
+                </label>
+                <nav class="menu">
+                    <ul class="header__up-left-menu on">
+                        <li><a class="header__up-left-menu-item text-span hulmi__off-720px" href="#about">О нас</a></li>
                         <li><a class="header__up-left-menu-item text-span" href="#menu">Меню</a></li>
-                        <li><a class="header__up-left-menu-item text-span" href="#bonus">Акции</a></li>
+                        <li><a class="header__up-left-menu-item text-span hulmi__off-680px" href="#bonus">Акции</a></li>
                         <!-- <li><a class="header__up-left_menu-item text-span off" href="#">Галерея</a></li> -->
                         <li><a class="header__up-left-menu-item text-span" href="#contacts">Контакты</a></li>
                     </ul>
@@ -45,24 +59,7 @@
                     </div>
                 </div>
                 
-                                 <!-- БУРГЕР-МЕНЮ -->
-                                 <div class="header__up-burger-menu hubm__on_720px ">
-                                    <input type="checkbox" id="burger-toggle" hidden>
-                                    <label class="burger-label" for="burger-toggle">
-                                        <span class="line"></span>
-                                        <span class="line"></span>
-                                        <span class="line"></span>
-                                    </label>
-                                    <nav class="menu">
-                                        <ul class="header__up-left-menu on">
-                                            <li><a class="header__up-left-menu-item text-span hulmi__off-720px" href="#about">О нас</a></li>
-                                            <li><a class="header__up-left-menu-item text-span" href="#menu">Меню</a></li>
-                                            <li><a class="header__up-left-menu-item text-span hulmi__off-680px" href="#bonus">Акции</a></li>
-                                            <!-- <li><a class="header__up-left_menu-item text-span off" href="#">Галерея</a></li> -->
-                                            <li><a class="header__up-left-menu-item text-span" href="#contacts">Контакты</a></li>
-                                        </ul>
-                                    </nav>
-                                </div>
+                                 
                                 
                     <span class="header__up-right-contacts-time text-span">Каждый день <br> 8:00 - 22:00</span>
                     <a href="#order" class="header__up-right-href">Заказать кофе</a>

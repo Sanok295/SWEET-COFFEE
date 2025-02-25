@@ -1,7 +1,5 @@
 @media screen and (max-width:1920px){
-    .header__up-left{
-        gap: 8vw;
-    }
+
 }
 @media screen and (max-width:1280px){
     /* TEXT STYLE */
@@ -21,7 +19,7 @@
 }
 
 /* HEADER */
-.header__up-left-logo{
+.header__up-logo{
     height: 60px;
     width: 90px;
 }
@@ -50,7 +48,7 @@
         white-space: wrap;
     }
     .header__up-right{
-        gap: 2vw;
+        gap: 1vw;
     }
 }
 
@@ -70,15 +68,11 @@
     .text-p, .text-span{
         font-size: 16px;
     }
-    .header__up-left{
-        gap: 2vw;
-    }
     .header__up-right{
         gap: 0;
     }
 }
-
-@media screen and (max-width:720px){
+@media screen and (max-width:780px){
     .hubm__on_720px{
         display: block;
         padding-left: 5vw;
@@ -87,13 +81,20 @@
     .hulm__off-720px{
         display: none;
     }
-    .header__up-left-logo{
+    .header__up-logo{
         height: 50px;
         width: 75px;
     }
     .header__up-right{
         gap: 3vw;
     }
+}
+
+@media screen and (max-width:720px){
+
+    
+    
+    
 }
 
 @media screen and (max-width:680px){
@@ -126,20 +127,15 @@
     label.burger-label{
         padding: 0;
     }
-    .header__up-burger-menu {
-        padding: 0;
-    }
-    .header__up-right{
-        gap: 1vw;
-    }
-    /* .header__up-right{
-        flex-wrap: wrap;
-        min-width: 345px;
-        gap: 1%;
+    .header__up-logo{
+        height: 30px;
+        width: 45px;
     }
     .header__up-right-href{
-        margin-left: 200px;
-    } */
+        font-size: 16px;
+    }
+    
+
 }
 
 

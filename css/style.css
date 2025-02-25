@@ -7,9 +7,9 @@
 
 
 
-/* main, footer{
+main, footer{
     display: none;
-} */
+}
 
 
 
@@ -137,15 +137,11 @@ a{
     top: 0;
     display: flex;
     justify-content: space-between;
+    align-items: center;
     padding: 10px 40px 10px;
 }
-.header__up-left{
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-    gap: 5vw;
-}
-.header__up-left-logo{
+
+.header__up-logo{
     z-index: 10;
     position: relative;
     background-image: url(../img/Logo-try.png);
@@ -181,7 +177,8 @@ a{
         transform: translateY(32px);
     }
 }
-.header__up-left-menu{
+
+.header__up-menu-items{
     color: var(--black-span);
     display: flex;
     gap: 2vw;
@@ -199,7 +196,7 @@ a{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    gap: 4vw;
+    gap: 3vw;
 }
 .header__up-right-contacts {
     display: flex;
