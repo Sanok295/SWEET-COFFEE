@@ -1,14 +1,9 @@
-// let isVisible = false;
-// window.addEventListener('scroll', () => {
-//   const hiddenWord = document.querySelector('.hidden-word');                    
-//   const scrollPosition = window.scrollY;
-//   const triggerHeight = 100; // Высота скролла, при которой произойдет анимация
+function showTab(index) {
+    const tabs = document.querySelectorAll('.tab');
+    const grids = document.querySelectorAll('.grid-container');
 
-//   if (scrollPosition > triggerHeight && !isVisible) {
-//     hiddenWord.style.opacity = '1';
-//     hiddenWord.style.transform = 'translateY(36px)';
-//     isVisible = true; // Устанавливаем флаг, что слово теперь видно
-//   }
-// });
-
-// ^^^ выползание слова из логотипа при прокрутке страницы
+    tabs.forEach((tab, i) => {
+        tab.classList.toggle('active', i === index);
+        grids[i].classList.toggle('active', i === index);
+    });
+}
