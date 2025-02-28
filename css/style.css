@@ -407,7 +407,7 @@ a{
 .cards__h2 {
     text-transform: uppercase;
     text-align: center;
-    margin-bottom: 50px;
+    margin-bottom: 20px;
 }
 
 
@@ -416,7 +416,7 @@ a{
     justify-content: center;
     cursor: pointer;
     gap: 50px;
-    margin-bottom: 30px;
+    margin-bottom: 0;
 }
 
 .tab {
@@ -439,19 +439,23 @@ a{
 
 .grid-container {
     display: none;
-    grid-template-columns: repeat(4, 1fr);
+    justify-content: center;
+    flex-flow: wrap;
     gap: 15px;
     padding: 20px;
     transition: opacity 0.5s ease;
 }
 
 .grid-container.active {
-    display: grid;
+    display: flex;
     opacity: 1;
 }
-
+/* .grid__container-up{
+    
+} */
 .card {
-    /* background: var(--hover); */
+    max-width: 240px;
+    width: 100%;
     border: 1px solid #ddd;
     border-radius: 5px;
     padding: 20px;
@@ -469,10 +473,10 @@ a{
 .cards__grid-container-card-span {
     font-weight: bold;
     font-size: 16px;
-    align-self: start;;
 }
 
 .cards__grid-container-card-p {
+    text-align: left;
     font-size: 14px;
 }
 
@@ -483,6 +487,40 @@ a{
     display: grid;
     opacity: 1;
 }
+
+.btn {
+    display: block;
+    text-align: center;
+    padding: 10px 20px;
+    background-color: transparent;
+    color: var(--hover);
+    cursor: pointer;
+}
+
+.hidden-block {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s ease, padding 0.5s ease;
+}
+
+input#toggle:checked + .hidden-block {
+    /* overflow: auto;    */
+    max-height: max-content; 
+    padding: 20px;
+}
+
+.hidden-menu {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+
+
+
+
+
+
 
 
 /* BONUS */
@@ -697,43 +735,7 @@ strong{
 }
 
 
-/* .btn {
-    display: inline-block;
-    margin: 20px;
-    padding: 10px 20px;
-    background-color: transparent;
-    color: var(--hover);
-    cursor: pointer;
-    border: 2px solid var(--black);
-    border-radius: 5px;
-}
 
-.hidden-block {
-    max-height: 0;
-    overflow: hidden;
-    transition: max-height 0.5s ease, padding 0.5s ease;
-    padding: 0 20px;
-    border: 1px solid #ccc;
-}
-
-input#toggle:checked + .hidden-block {
-    overflow:auto;  Полоса прокрутки
-    max-height: 100px; Увеличьте или уменьшите под свои нужды
-    padding: 20px;
-}
-
-.card {
-    border: 1px solid #ccc;
-    padding: 20px;
-    width: 200px;
-    text-align: center;
-}
-.hidden-menu {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
-    margin-top: 20px;
-} */
 
 
 
