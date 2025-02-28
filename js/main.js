@@ -7,3 +7,4 @@ function showTab(index) {
         grids[i].classList.toggle('active', i === index);
     });
 }
+
