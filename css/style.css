@@ -401,34 +401,45 @@ a{
 
 
 /* MENU */
+.cards {
+
+}
+.cards__h2 {
+    text-transform: uppercase;
+    text-align: center;
+    margin-bottom: 50px;
+}
+
 
 .tabs {
     display: flex;
     justify-content: center;
     cursor: pointer;
     gap: 50px;
+    margin-bottom: 30px;
 }
 
 .tab {
-    padding: 10px 20px;
+    padding: 5px 20px;
     background: transparent;
+    border: 2px transparent;
     border-radius: 5px;
-    transition: background 0.3s ease;
+    transition: 0.3s ease;
 }
 
 .tab:hover {
-    background: var(--hover);
+    color: var(--hover);
 }
 
 .tab.active {
-    background: #fff;
-    font-weight: bold;
-    border: 2px solid #888;
+    background: transparent;
+    border: 2px solid var(--hover);
+    color: var(--hover);
 }
 
 .grid-container {
     display: none;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(4, 1fr);
     gap: 15px;
     padding: 20px;
     transition: opacity 0.5s ease;
@@ -440,17 +451,32 @@ a{
 }
 
 .card {
-    background: #fff;
+    /* background: var(--hover); */
     border: 1px solid #ddd;
     border-radius: 5px;
     padding: 20px;
     text-align: center;
     transition: transform 0.2s;
 }
-
-.card:hover {
-    transform: scale(1.05);
+.card>img{
+    width: 200px;
+    height: 200px;
+    border-radius: 10px;
 }
+.card:hover {
+    transform: scale(1.02);
+}
+.cards__grid-container-card-span {
+    font-weight: bold;
+    font-size: 16px;
+    align-self: start;;
+}
+
+.cards__grid-container-card-p {
+    font-size: 14px;
+}
+
+
 
 /* Включение отображения первой вкладки по умолчанию */
 .grid-container:first-child {
