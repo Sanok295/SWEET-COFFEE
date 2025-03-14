@@ -46,9 +46,13 @@
     display: flex;
     justify-content: center;
     text-align: center;
-    padding:  20px 40px;
+    padding:  40px 40px;
     border: 2px solid var(--black);
     border-radius: 30px;
+}
+.order__number {
+    font-size: 34px;
+
 }
 }
 
